@@ -12,4 +12,26 @@ package casaterror;
 public class Habitacion {
     private String desc;
     private int norte, sur, este, oeste;
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public void setNorte(int norte) {
+        this.norte = norte;
+    }
+
+    public void setSur(int sur) {
+        this.sur = sur;
+    }
+
+    public void setEste(int este) {
+        this.este = este;
+    }
+
+    public void setOeste(int oeste) {
+        this.oeste = oeste;
+    }
+    
+    
 }
