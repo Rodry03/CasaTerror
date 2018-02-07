@@ -10,5 +10,6 @@ package casaterror;
  * @author rodry
  */
 public class Habitacion {
-    
+    private String desc;
+    private int norte, sur, este, oeste;
 }
