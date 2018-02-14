@@ -36,5 +36,25 @@ public class Objeto {
         this.lotengo = lotengo;
     }
 
+    public int getEstado() {
+        return estado;
+    }
+
+    public String getDesc1() {
+        return desc1;
+    }
+
+    public String getDesc2() {
+        return desc2;
+    }
+
+    public int getHab() {
+        return hab;
+    }
+
+    public int getLotengo() {
+        return lotengo;
+    }
+
     
 }

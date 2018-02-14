@@ -32,6 +32,26 @@ public class Habitacion {
     public void setOeste(int oeste) {
         this.oeste = oeste;
     }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public int getNorte() {
+        return norte;
+    }
+
+    public int getSur() {
+        return sur;
+    }
+
+    public int getEste() {
+        return este;
+    }
+
+    public int getOeste() {
+        return oeste;
+    }
     
     
 }
