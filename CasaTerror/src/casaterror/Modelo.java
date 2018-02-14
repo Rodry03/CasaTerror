@@ -11,17 +11,51 @@ package casaterror;
  */
 public class Modelo {
 
-    private Habitacion habitaciones[] = new Habitacion[10];
+    private Habitacion[] habitaciones = new Habitacion[10];
+    private Objeto[] objetos=new Objeto[5];
+    private static final int PERRO=1,LLAVE=2,ESCALERA=3,HUESO=4;
+    private boolean fin=false;
+    private int habActual=1;
 
     public Modelo() {
+        for (int i = 0; i < objetos.length; i++) {
+            objetos[i]=new Objeto();
+        }
         for (int i = 1; i < habitaciones.length; i++) {
             habitaciones[i] = new Habitacion();
         }
+        asignarObjetos();
+        asignarHabitaciones();
+        while (!fin) {
+            //Mostramos la informacion al jugador
+            System.out.println(habitaciones[habActual].getDesc());
+            // Mostramos si hay algún objeto
+            for (int i = 1; i <= objetos.length; i++) {
+                if (objetos[i].getHab() == habActual) {
+                     System.out.println("También puedes ver ");
+                    // mostramos la descripción del objeto según su estado
+                    if (objetos[i].getEstado() == 1) {
+                         System.out.println(objetos[i].getDesc1());
+                    } else {
+                         System.out.println(objetos[i].getDesc2());
+                    }
+                }
+            }
 
-        asignarPropiedades();
+            // Leemos la entrada del jugador
+            // Procesamos la entrada del jugador
+        }
+
+    }
+    
+    private void asignarObjetos() {
+        objetoPerro();
+        objetoLlave();
+        objtoEscalera();
+        objetoHueso();
     }
 
-    public void asignarPropiedades() {
+    public void asignarHabitaciones() {
         habitacion1();
         habitacion2();
         habitacion3();
@@ -106,4 +140,38 @@ public class Modelo {
         habitaciones[1].setNorte(6);
         habitaciones[1].setSur(0);
     }
+
+    private void objetoPerro() {
+        objetos[PERRO].setEstado(1);
+        objetos[PERRO].setDesc1("un perro rabioso");
+        objetos[PERRO].setDesc2("un perro comiéndose un hueso");
+        objetos[PERRO].setHab(9);
+        objetos[PERRO].setLotengo(0);
+    }
+
+    private void objetoHueso() {
+        objetos[HUESO].setEstado(1);
+        objetos[HUESO].setDesc1("Un hueso");
+        objetos[HUESO].setDesc2("");
+        objetos[HUESO].setHab(2);
+        objetos[HUESO].setLotengo(0);
+    }
+
+    private void objetoLlave() {
+        objetos[LLAVE].setEstado(1);
+        objetos[LLAVE].setDesc1("Una llave");
+        objetos[LLAVE].setDesc2("");
+        objetos[LLAVE].setHab(3);
+        objetos[LLAVE].setLotengo(0);
+    }
+
+    private void objtoEscalera() {
+        objetos[ESCALERA].setEstado(1);
+        objetos[ESCALERA].setDesc1("Una escalera");
+        objetos[ESCALERA].setDesc2("");
+        objetos[ESCALERA].setHab(9);
+        objetos[ESCALERA].setLotengo(0);
+    }
+
+    
 }

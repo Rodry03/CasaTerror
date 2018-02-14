@@ -16,4 +16,25 @@ public class Objeto {
     private int hab; // Habitación en la que se encuentra
     private int lotengo; // Indica si tengo este objeto en mi inventario
 
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
+    public void setDesc1(String desc1) {
+        this.desc1 = desc1;
+    }
+
+    public void setDesc2(String desc2) {
+        this.desc2 = desc2;
+    }
+
+    public void setHab(int hab) {
+        this.hab = hab;
+    }
+
+    public void setLotengo(int lotengo) {
+        this.lotengo = lotengo;
+    }
+
+    
 }
