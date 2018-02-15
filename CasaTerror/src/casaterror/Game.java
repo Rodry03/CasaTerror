@@ -9,15 +9,13 @@ package casaterror;
  *
  * @author rodry
  */
-public class Modelo {
+public class Game {
 
     private Habitacion[] habitaciones = new Habitacion[10];
     private Objeto[] objetos=new Objeto[5];
     private static final int PERRO=1,LLAVE=2,ESCALERA=3,HUESO=4;
-    private boolean fin=false;
-    private int habActual=1;
 
-    public Modelo() {
+    public Game() {
         for (int i = 0; i < objetos.length; i++) {
             objetos[i]=new Objeto();
         }
@@ -26,7 +24,7 @@ public class Modelo {
         }
         asignarObjetos();
         asignarHabitaciones();
-        
+        new GameLoop(habitaciones,objetos);
 
     }
     
@@ -153,6 +151,22 @@ public class Modelo {
         objetos[ESCALERA].setDesc2("");
         objetos[ESCALERA].setHab(9);
         objetos[ESCALERA].setLotengo(0);
+    }
+
+    public static int getPERRO() {
+        return PERRO;
+    }
+
+    public static int getLLAVE() {
+        return LLAVE;
+    }
+
+    public static int getESCALERA() {
+        return ESCALERA;
+    }
+
+    public static int getHUESO() {
+        return HUESO;
     }
 
     

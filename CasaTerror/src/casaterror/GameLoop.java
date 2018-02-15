@@ -5,32 +5,76 @@
  */
 package casaterror;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Trinitarios
  */
 public class GameLoop {
 
-    public GameLoop() {
-        while (!fin) {
-            //Mostramos la informacion al jugador
-            System.out.println(habitaciones[habActual].getDesc());
-            // Mostramos si hay algún objeto
-            for (int i = 1; i <= objetos.length; i++) {
-                if (objetos[i].getHab() == habActual) {
-                     System.out.println("También puedes ver ");
-                    // mostramos la descripción del objeto según su estado
-                    if (objetos[i].getEstado() == 1) {
-                         System.out.println(objetos[i].getDesc1());
-                    } else {
-                         System.out.println(objetos[i].getDesc2());
-                    }
-                }
-            }
+    private Habitacion[] habitaciones;
+    private Objeto[] objetos;
+    private boolean fin = false;
+    private int habActual = 1;
+    private Scanner in = new Scanner(System.in);
+    private String accion, nombre;
+    private int completada;
 
-            // Leemos la entrada del jugador
-            // Procesamos la entrada del jugador
+    public GameLoop(Habitacion[] habitaciones, Objeto[] objetos) {
+        this.habitaciones = habitaciones;
+        this.objetos = objetos;
+        while (!fin) {
+            jugar();
         }
     }
-    
+
+    private void jugar() {
+        //Mostramos la informacion al jugador
+        System.out.println(habitaciones[habActual].getDesc());
+        // Mostramos si hay algún objeto
+        for (int i = 1; i <= objetos.length; i++) {
+            if (objetos[i].getHab() == habActual) {
+                System.out.println("También puedes ver ");
+                // mostramos la descripción del objeto según su estado
+                if (objetos[i].getEstado() == 1) {
+                    System.out.println(objetos[i].getDesc1());
+                } else {
+                    System.out.println(objetos[i].getDesc2());
+                }
+            }
+        }
+        System.out.println("Puedes ir dirección ");
+        if (habitaciones[habActual].getNorte() != 0) {
+            System.out.println("Norte ");
+        }
+        if (habitaciones[habActual].getSur() != 0) {
+            System.out.println("Sur ");
+        }
+        if (habitaciones[habActual].getEste() != 0) {
+            System.out.println("Este ");
+        }
+        if (habitaciones[habActual].getOeste() != 0) {
+            System.out.println("Oeste ");
+        }
+
+        // Leemos la entrada del jugador
+        System.out.println("Indica la accion ");
+        accion = in.next();
+        nombre = in.next();
+
+        // Procesamos la entrada del jugador
+        if (accion.equals("coger")) {
+            completada = 0;
+            // Hueso
+            if (nombre.equals("hueso") && objetos[Game.getHUESO()].getHab() == habActual) {
+                completada = 1;
+                objetos[Game.getHUESO()].setHab(0);
+                objetos[Game.getHUESO()].setLotengo(1);
+                System.out.println("Has cogido el hueso.");
+            }
+        }
+
+    }
+
 }

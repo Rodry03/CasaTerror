@@ -15,8 +15,7 @@ public class CasaTerror {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Modelo m=new Modelo();
-        new GameLoop();
+        Game m=new Game();
         
     }
     
