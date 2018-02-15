@@ -73,8 +73,61 @@ public class GameLoop {
                 objetos[Game.getHUESO()].setLotengo(1);
                 System.out.println("Has cogido el hueso.");
             }
-        }
+            // Escalera
+            if (nombre.equals("escalera") && objetos[Game.getESCALERA()].getHab() == habActual && objetos[Game.getPERRO()].getEstado() == 0) {
+                completada = 1;
+                objetos[Game.getESCALERA()].setHab(0);
+                objetos[Game.getESCALERA()].setLotengo(1);
+                System.out.println("Has cogido la escalera.");
+            }
+            //Llave
+            if (nombre.equals("llave") && objetos[Game.getLLAVE()].getHab() == habActual && objetos[Game.getESCALERA()].getLotengo() == 1) {
+                completada = 1;
+                objetos[Game.getLLAVE()].setHab(0);
+                objetos[Game.getLLAVE()].setLotengo(1);
+                System.out.println("Has cogido la llave.");
+            }
+        } else if (accion.equals("usar")) {
+            if (nombre.equals("llave") && objetos[Game.getLLAVE()].getHab() == 8) {
+                completada = 1;
+                fin = true;
+                System.out.println("Has conseguido salir");
+            }
 
+        } else if (accion.equals("ir")) {
+            //
+            switch (nombre) {
+                case "norte":
+                    if(habitaciones[habActual].getNorte()!=0){
+                        habActual=habitaciones[habActual].getNorte();
+                    }
+                    break;
+                case "este":
+                    if(habitaciones[habActual].getEste()!=0){
+                        habActual=habitaciones[habActual].getEste();
+                    }
+                    break;
+                case "oeste":
+                    if(habitaciones[habActual].getOeste()!=0){
+                        habActual=habitaciones[habActual].getOeste();
+                    }
+                    break;
+                case "sur":
+                    if(habitaciones[habActual].getSur()!=0){
+                        habActual=habitaciones[habActual].getSur();
+                    }
+                    break;
+                default:
+                    System.out.println("No existe esa direccion");
+                    break;
+            }
+        } else if (accion.equals("dar")) {
+            if (nombre.equals("hueso") && objetos[Game.getPERRO()].getHab() == habActual) {
+                completada = 1;
+                objetos[Game.getPERRO()].setEstado(0);
+                System.out.println("El perro se ha tranquilizado");
+            }
+        }
     }
 
 }
