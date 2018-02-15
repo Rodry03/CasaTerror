@@ -58,7 +58,7 @@ public class Game {
     }
 
     private void habitacion2() {
-        habitaciones[2].setDesc("Estas en la habitacion 2. Hay un hueso.");
+        habitaciones[2].setDesc("Estas en la habitacion 2.");
         habitaciones[2].setEste(0);
         habitaciones[2].setOeste(0);
         habitaciones[2].setNorte(0);
@@ -66,7 +66,7 @@ public class Game {
     }
 
     private void habitacion3() {
-        habitaciones[3].setDesc("Estas en la habitacion 3. Hay una llave.");
+        habitaciones[3].setDesc("Estas en la habitacion 3.");
         habitaciones[3].setEste(0);
         habitaciones[3].setOeste(0);
         habitaciones[3].setNorte(0);
@@ -114,7 +114,7 @@ public class Game {
     }
 
     private void habitacion9() {
-        habitaciones[9].setDesc("Estas en la habitacion 9. Hay un perro que muerde. Una escalera para subir.");
+        habitaciones[9].setDesc("Estas en la habitacion 9.");
         habitaciones[9].setEste(0);
         habitaciones[9].setOeste(0);
         habitaciones[9].setNorte(6);
@@ -123,8 +123,8 @@ public class Game {
 
     private void objetoPerro() {
         objetos[PERRO].setEstado(1);
-        objetos[PERRO].setDesc1("un perro rabioso");
-        objetos[PERRO].setDesc2("un perro comiéndose un hueso");
+        objetos[PERRO].setDesc1("Un perro rabioso");
+        objetos[PERRO].setDesc2("Un perro comiéndose un hueso");
         objetos[PERRO].setHab(9);
         objetos[PERRO].setLotengo(0);
     }
