@@ -58,67 +58,67 @@ public class Game {
     }
 
     private void habitacion2() {
-        habitaciones[1].setDesc("Estas en la habitacion 2. Hay un hueso.");
-        habitaciones[1].setEste(0);
-        habitaciones[1].setOeste(0);
-        habitaciones[1].setNorte(0);
-        habitaciones[1].setSur(5);
+        habitaciones[2].setDesc("Estas en la habitacion 2. Hay un hueso.");
+        habitaciones[2].setEste(0);
+        habitaciones[2].setOeste(0);
+        habitaciones[2].setNorte(0);
+        habitaciones[2].setSur(5);
     }
 
     private void habitacion3() {
-        habitaciones[1].setDesc("Estas en la habitacion 3. Hay una llave.");
-        habitaciones[1].setEste(0);
-        habitaciones[1].setOeste(0);
-        habitaciones[1].setNorte(0);
-        habitaciones[1].setSur(6);
+        habitaciones[3].setDesc("Estas en la habitacion 3. Hay una llave.");
+        habitaciones[3].setEste(0);
+        habitaciones[3].setOeste(0);
+        habitaciones[3].setNorte(0);
+        habitaciones[3].setSur(6);
     }
 
     private void habitacion4() {
-        habitaciones[1].setDesc("Estas en la habitacion 4. No hay nada.");
-        habitaciones[1].setEste(5);
-        habitaciones[1].setOeste(0);
-        habitaciones[1].setNorte(1);
-        habitaciones[1].setSur(7);
+        habitaciones[4].setDesc("Estas en la habitacion 4. No hay nada.");
+        habitaciones[4].setEste(5);
+        habitaciones[4].setOeste(0);
+        habitaciones[4].setNorte(1);
+        habitaciones[4].setSur(7);
     }
 
     private void habitacion5() {
-        habitaciones[1].setDesc("Estas en la habitacion 5. No hay nada.");
-        habitaciones[1].setEste(6);
-        habitaciones[1].setOeste(4);
-        habitaciones[1].setNorte(5);
-        habitaciones[1].setSur(8);
+        habitaciones[5].setDesc("Estas en la habitacion 5. No hay nada.");
+        habitaciones[5].setEste(6);
+        habitaciones[5].setOeste(4);
+        habitaciones[5].setNorte(5);
+        habitaciones[5].setSur(8);
     }
 
     private void habitacion6() {
-        habitaciones[1].setDesc("Estas en la habitacion 6. No hay nada.");
-        habitaciones[1].setEste(0);
-        habitaciones[1].setOeste(5);
-        habitaciones[1].setNorte(3);
-        habitaciones[1].setSur(9);
+        habitaciones[6].setDesc("Estas en la habitacion 6. No hay nada.");
+        habitaciones[6].setEste(0);
+        habitaciones[6].setOeste(5);
+        habitaciones[6].setNorte(3);
+        habitaciones[6].setSur(9);
     }
 
     private void habitacion7() {
-        habitaciones[1].setDesc("Estas en la habitacion 7. El baño, por si necesitas hacer un pis.");
-        habitaciones[1].setEste(0);
-        habitaciones[1].setOeste(0);
-        habitaciones[1].setNorte(4);
-        habitaciones[1].setSur(0);
+        habitaciones[7].setDesc("Estas en la habitacion 7. El baño, por si necesitas hacer un pis.");
+        habitaciones[7].setEste(0);
+        habitaciones[7].setOeste(0);
+        habitaciones[7].setNorte(4);
+        habitaciones[7].setSur(0);
     }
 
     private void habitacion8() {
-        habitaciones[1].setDesc("Estas en la habitacion 8. La salida esta aqui.");
-        habitaciones[1].setEste(0);
-        habitaciones[1].setOeste(0);
-        habitaciones[1].setNorte(5);
-        habitaciones[1].setSur(13);
+        habitaciones[8].setDesc("Estas en la habitacion 8. La salida esta aqui.");
+        habitaciones[8].setEste(0);
+        habitaciones[8].setOeste(0);
+        habitaciones[8].setNorte(5);
+        habitaciones[8].setSur(13);
     }
 
     private void habitacion9() {
-        habitaciones[1].setDesc("Estas en la habitacion 9. Hay un perro que muerde. Una escalera para subir.");
-        habitaciones[1].setEste(0);
-        habitaciones[1].setOeste(0);
-        habitaciones[1].setNorte(6);
-        habitaciones[1].setSur(0);
+        habitaciones[9].setDesc("Estas en la habitacion 9. Hay un perro que muerde. Una escalera para subir.");
+        habitaciones[9].setEste(0);
+        habitaciones[9].setOeste(0);
+        habitaciones[9].setNorte(6);
+        habitaciones[9].setSur(0);
     }
 
     private void objetoPerro() {
