@@ -16,6 +16,7 @@ public class CasaTerror {
      */
     public static void main(String[] args) {
         Modelo m=new Modelo();
+        new GameLoop();
         
     }
     
