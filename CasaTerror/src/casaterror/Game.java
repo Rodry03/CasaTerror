@@ -85,7 +85,7 @@ public class Game {
         habitaciones[5].setDesc("Estas en la habitacion 5. No hay nada.");
         habitaciones[5].setEste(6);
         habitaciones[5].setOeste(4);
-        habitaciones[5].setNorte(5);
+        habitaciones[5].setNorte(2);
         habitaciones[5].setSur(8);
     }
 
