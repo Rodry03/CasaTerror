@@ -110,7 +110,7 @@ public class Game {
         habitaciones[8].setEste(0);
         habitaciones[8].setOeste(0);
         habitaciones[8].setNorte(5);
-        habitaciones[8].setSur(13);
+        habitaciones[8].setSur(0);
     }
 
     private void habitacion9() {

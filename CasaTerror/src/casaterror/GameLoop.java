@@ -33,7 +33,7 @@ public class GameLoop {
         //Mostramos la informacion al jugador
         System.out.println(habitaciones[habActual].getDesc());
         // Mostramos si hay algún objeto
-        for (int i = 1; i <= objetos.length; i++) {
+        for (int i = 1; i <= objetos.length-1; i++) {
             if (objetos[i].getHab() == habActual) {
                 System.out.println("También puedes ver ");
                 // mostramos la descripción del objeto según su estado
