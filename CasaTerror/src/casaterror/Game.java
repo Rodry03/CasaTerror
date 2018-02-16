@@ -74,7 +74,7 @@ public class Game {
     }
 
     private void habitacion4() {
-        habitaciones[4].setDesc("Estas en la habitacion 4. No hay nada.");
+        habitaciones[4].setDesc("Estas en la habitacion 4.");
         habitaciones[4].setEste(5);
         habitaciones[4].setOeste(0);
         habitaciones[4].setNorte(1);
@@ -82,7 +82,7 @@ public class Game {
     }
 
     private void habitacion5() {
-        habitaciones[5].setDesc("Estas en la habitacion 5. No hay nada.");
+        habitaciones[5].setDesc("Estas en la habitacion 5.");
         habitaciones[5].setEste(6);
         habitaciones[5].setOeste(4);
         habitaciones[5].setNorte(2);
@@ -90,7 +90,7 @@ public class Game {
     }
 
     private void habitacion6() {
-        habitaciones[6].setDesc("Estas en la habitacion 6. No hay nada.");
+        habitaciones[6].setDesc("Estas en la habitacion 6");
         habitaciones[6].setEste(0);
         habitaciones[6].setOeste(5);
         habitaciones[6].setNorte(3);
@@ -132,7 +132,7 @@ public class Game {
     private void objetoHueso() {
         objetos[HUESO].setEstado(1);
         objetos[HUESO].setDesc1("Un hueso");
-        objetos[HUESO].setDesc2("");
+        objetos[HUESO].setDesc2("Un hueso mordido");
         objetos[HUESO].setHab(2);
         objetos[HUESO].setLotengo(0);
     }
@@ -140,7 +140,7 @@ public class Game {
     private void objetoLlave() {
         objetos[LLAVE].setEstado(1);
         objetos[LLAVE].setDesc1("Una llave");
-        objetos[LLAVE].setDesc2("");
+        objetos[LLAVE].setDesc2("Una llave en la cerradura");
         objetos[LLAVE].setHab(3);
         objetos[LLAVE].setLotengo(0);
     }
@@ -148,7 +148,7 @@ public class Game {
     private void objtoEscalera() {
         objetos[ESCALERA].setEstado(1);
         objetos[ESCALERA].setDesc1("Una escalera");
-        objetos[ESCALERA].setDesc2("");
+        objetos[ESCALERA].setDesc2("Una escalera colocada");
         objetos[ESCALERA].setHab(9);
         objetos[ESCALERA].setLotengo(0);
     }
