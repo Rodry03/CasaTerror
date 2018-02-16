@@ -121,7 +121,7 @@ public class GameLoop {
                         break;
                 }   break;
             case "dar":
-                if (nombre.equals("hueso") && objetos[Game.getPERRO()].getHab() == habActual) {
+                if (nombre.equals("hueso") && objetos[Game.getPERRO()].getHab() == habActual && objetos[Game.getHUESO()].getLotengo()==1) {
                     completada = 1;
                     objetos[Game.getPERRO()].setEstado(0);
                     System.out.println("El perro se ha tranquilizado");
@@ -130,6 +130,13 @@ public class GameLoop {
                 System.out.println("Accion incorrecta");
                 break;
         }
+        System.out.println("Tienes los objetos:");
+        for (int i = 1; i < 5; i++) {
+            if(objetos[i].getLotengo()==1){
+                System.out.println(objetos[i].getDesc1());
+            }
+        }
+        
     }
 
 }
