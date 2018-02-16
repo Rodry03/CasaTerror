@@ -85,6 +85,7 @@ public class GameLoop {
                     completada = 1;
                     objetos[Game.getLLAVE()].setHab(0);
                     objetos[Game.getLLAVE()].setLotengo(1);
+                    objetos[Game.getESCALERA()].setLotengo(0);
                     System.out.println("Has cogido la llave.");
                 }   break;
             case "usar":
@@ -125,16 +126,21 @@ public class GameLoop {
                     completada = 1;
                     objetos[Game.getPERRO()].setEstado(0);
                     System.out.println("El perro se ha tranquilizado");
+                    objetos[Game.getHUESO()].setLotengo(0);
                 }   break;
             default:
                 System.out.println("Accion incorrecta");
                 break;
         }
         System.out.println("Tienes los objetos:");
-        for (int i = 1; i < 5; i++) {
-            if(objetos[i].getLotengo()==1){
-                System.out.println(objetos[i].getDesc1());
-            }
+        if(objetos[Game.getESCALERA()].getLotengo()==1){
+            System.out.println("Una escalera");
+        }
+        if(objetos[Game.getLLAVE()].getLotengo()==1){
+            System.out.println("Una llave");
+        }
+        if(objetos[Game.getHUESO()].getLotengo()==1){
+            System.out.println("Un hueso");
         }
         
     }
