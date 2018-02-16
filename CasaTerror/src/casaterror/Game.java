@@ -139,8 +139,8 @@ public class Game {
 
     private void objetoLlave() {
         objetos[LLAVE].setEstado(1);
-        objetos[LLAVE].setDesc1("Una llave");
-        objetos[LLAVE].setDesc2("Una llave en la cerradura");
+        objetos[LLAVE].setDesc1("Una llave en un sitio alto");
+        objetos[LLAVE].setDesc2("Una llave accesible con la escalera");
         objetos[LLAVE].setHab(3);
         objetos[LLAVE].setLotengo(0);
     }

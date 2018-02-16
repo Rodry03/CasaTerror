@@ -78,6 +78,7 @@ public class GameLoop {
                     completada = 1;
                     objetos[Game.getESCALERA()].setHab(0);
                     objetos[Game.getESCALERA()].setLotengo(1);
+                    objetos[Game.getLLAVE()].setEstado(0);
                     System.out.println("Has cogido la escalera.");
                 }   //Llave
                 if (nombre.equals("llave") && objetos[Game.getLLAVE()].getHab() == habActual && objetos[Game.getESCALERA()].getLotengo() == 1) {
